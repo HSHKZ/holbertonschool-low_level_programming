@@ -1,12 +1,23 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
+ *main - Write a program that prints _putchar, followed by a new line.
  *
- * Return: Always 0 (Success)
+ *Description: affiche les caractères les un après les autres
+ *puis retour à la ligne.
+ *
+ *Return: all thing
  */
+
 int main(void)
 {
-	printf("_putchar\n");
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
-&}	
+}	
