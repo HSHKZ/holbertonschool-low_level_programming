@@ -1,34 +1,31 @@
 #include "main.h"
-#include "stdio.h"
+#include <stdio.h>
+
 /**
- * print_to_98 - prints numbers until 98
- * @n: an int to start the count
- * Return: void
+ *print_to_98 - return
+ *@n: is come back
+ *
+ *Description: it want eat me
+ *
+ *Return: Success
  */
 void print_to_98(int n)
 {
-	if (n < 98)
+	for (; n < 98; n++)
 	{
-		while (n < 98)
-		{
-			printf("%d,", n);
-			putchar(32);
-			n++;
-		}
 		printf("%d", n);
-		putchar('\n');
+		if (n < 98)
+		{
+			printf(", ");
+		}
 	}
-	else if (n > 98)
+	for (; n >= 98; n--)
 	{
-		while (n > 98)
-		{
-			printf("%d,", n);
-			putchar(32);
-			n--;
-		}
 		printf("%d", n);
-		putchar('\n');
+		if (n > 98)
+		{
+			printf(", ");
+		}
 	}
-	else
-		 printf("%d\n", n);
+	printf("\n");
 }
