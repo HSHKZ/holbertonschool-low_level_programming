@@ -15,14 +15,12 @@ void rev_string(char *s)
     int i;
     char temp;
 
-    // Find the length of the string
     while (s[length] != '\0')
 
     {
         length++;
     }
 
-    // Swap the characters from the start and end of the string
     for (i = 0; i < length / 2; i++)
     {
         temp = s[i];
