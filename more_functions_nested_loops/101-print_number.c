@@ -3,9 +3,12 @@
 
 /**
  * print_number - prints an integer using only _putchar
+ *
  * @n: integer to print
  */
+
 void print_number(int n)
+
 {
     if (n == INT_MIN)
     {
