@@ -1,25 +1,19 @@
-#include <stdio.h>
-#include "mainadvanced.h"
+#include "main.h"
 
 /**
- * print_number - check the code
- *
- * Description: print
- *
- * @n: input
- *
- * Return: Always 0.
+ * print_number - prints an integer using only _putchar
+ * @n: integer to print
  */
-
 void print_number(int n)
 {
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
+    if (n < 0)
+    {
+        _putchar('-');
+        n = -n;
+    }
 
-	if (n > 9)
-		print_number(n / 10);
-	_putchar('0' + (n % 10));
+    if (n / 10)
+        print_number(n / 10);
+
+    _putchar((n % 10) + '0');
 }
