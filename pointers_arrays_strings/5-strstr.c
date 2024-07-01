@@ -3,7 +3,9 @@
 
 /**
  * _strstr - Locates a substring.
+ *
  * @s: The string to search in.
+ *
  * @a: The substring to find.
  *
  * Description: This function searches for the first occurrence of the substring `a` in the string `s`. If the substring is found, a pointer to the first occurrence is returned. If the substring is not found, NULL is returned.
