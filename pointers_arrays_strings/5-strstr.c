@@ -8,9 +8,9 @@
  *
  * @a: The substring to find.
  *
- * Description: This function searches for the first occurrence of the substring `a` in the string `s`.
+ * Description: This function searches first occurrence of the substring `a` in the string `s`.
  *
- * Return: A pointer to the first occurrence of the substring, or NULL if not found.
+ * Return: A pointer to the first occurrence or NULL if not found.
  */
 
 char *_strstr(char *s, char *a)
