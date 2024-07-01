@@ -8,7 +8,7 @@
  *
  * @a: The substring to find.
  *
- * Description: This function searches occurrence of substring `a` in the string `s`.
+ * Description: The function searche occurrence of substring `a` in string `s`.
  *
  * Return: A pointer to the first occurrence or NULL if not found.
  */
