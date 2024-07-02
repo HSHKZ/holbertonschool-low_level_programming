@@ -45,6 +45,7 @@ int isIdentical(char *String1, char *String2)
  *
  * Return: Always 0.
  */
+
 /*
 int lengthString(char *s)
 {
@@ -53,6 +54,7 @@ int lengthString(char *s)
 	return (1 + lengthString(s + 1));
 }
 */
+
 /**
  * wildcmp - check the code
  *
