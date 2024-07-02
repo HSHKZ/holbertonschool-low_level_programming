@@ -1,52 +1,76 @@
 #include "main.h"
 
 /**
- * wildcmp_recursive - recursively compare two strings with wildcard support
- * @s1: first string to compare
- * @s2: second string, may contain the wildcard '*'
+ * isIdentical - searches for the length of the string
  *
- * Description:
- * - Helper function for wildcmp, without using loops.
+ * Description: print
  *
- * Return: 1 if the strings can be considered identical, 0 otherwise
+ * @lenFirst: length string 1
+ *
+ * @lenSecond: length string 2
+ *
+ * @String1: string 1
+ *
+ * @String2: string 2
+ *
+ * Return: Always 0.
  */
-int wildcmp_recursive(char *s1, char *s2)
+
+int isIdentical(char *String1, char *String2)
 {
-if (*s1 == '\0' && *s2 == '\0')
-return (1);
-
-if (*s2 == '*')
-{
-if (*(s2 + 1) == '\0')
-return (1);
-		
-if (*s1 == '\0')
-return (0);
-
-return (wildcmp_recursive(s1, s2 + 1) || wildcmp_recursive(s1 + 1, s2));
-}
-
-if (*s1 == '\0' || *s2 == '\0')
-return (0);
-
-if (*s1 == *s2 || *s2 == '?')
-return (wildcmp_recursive(s1 + 1, s2 + 1));
-
-return (0);
+	if ((String1[0] == '\0') && (String2[0] == '\0'))
+		return (1);
+	else if ((String1[0] != String2[0]) && (String2[0] != '*'))
+		return (0);
+	else if (String2[0] != '*')
+		return (isIdentical(String1 + 1, String2 + 1));
+	else if (String2[1] == String1[0])
+		return (isIdentical(String1, String2 + 1));
+	else if (String2[1] == String1[1])
+		return (isIdentical(String1 + 1, String2 + 1));
+	else if (String2[1] == '*')
+		return (isIdentical(String1, String2 + 1));
+	else if ((String1[0] == '\0') || (String2[0] == '\0'))
+		return (0);
+	else 
+		return (isIdentical(String1 + 1, String2));
 }
 
 /**
- * wildcmp - compare two strings with wildcard support
- * @s1: first string to compare
- * @s2: second string, may contain the wildcard '*'
+ * lengthString - searches for the length of the string
  *
- * Description:
- * - s2 can contain the special character '*'.
- * - The special char '*' can replace any string (including an empty string).
+ * Description: print
  *
- * Return: 1 if the strings can be considered identical, 0 otherwise
+ * @s: input string
+ *
+ * Return: Always 0.
  */
+/*
+int lengthString(char *s)
+{
+	if (s[0] == '\0')
+		return (0);
+	return (1 + lengthString(s + 1));
+}
+*/
+/**
+ * wildcmp - check the code
+ *
+ * Description: print
+ *
+ * @s1: input string 1
+ *
+ * @s2: input string 2
+ *
+ * Return: Always 0.
+ */
+
 int wildcmp(char *s1, char *s2)
 {
-return (wildcmp_recursive(s1, s2));
+/*	int i, j;
+
+	i = lengthString(s1) - 1;
+	j = lengthString(s2) - 1;
+*/
+	return (isIdentical(s1, s2)); 
 }
