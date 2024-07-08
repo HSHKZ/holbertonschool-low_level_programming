@@ -1,5 +1,5 @@
-#include<stdlib.h>
-#include"main.h"
+#include <stdlib.h>
+#include "main.h"
 
 /**
  * _strdup - check the code
