@@ -1,49 +1,33 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stddef.h>
+#include <stdlib.h>
 
 /**
- * _strdup - check the code
+ * _strdup - begining
  *
- * @str: The character to print
+ * Description: print if negative or positive
  *
- * Return: character.
+ * @str: sting
+ *
+ * Return: 0 ends the program
  */
 
 char *_strdup(char *str)
-
 {
-	char *str_duplicated;
-	unsigned int len, i;
-	char *temporaire = str;
+	char *s;
+	int i, j;
 
-	if (str == 0)
-	{
+	if (str == NULL)
 		return (NULL);
-	}
-	
-	len = 0;
-	while (*temporaire != '\0')
-		
-	{
-		temporaire++;
-		len++;
-	}
-	
-	str_duplicated = malloc(sizeof(char) * (len + 1));
-	if (str_duplicated == NULL)
-		
-	{
+	for (j = 0 ; str[j] != '\0' ; j++)
+	;
+	j++;
+	s = malloc(j);
+	if (s == NULL)
 		return (NULL);
-	}
-	
-	i = 0;
-	while (i < len)
-
-	{
-		str_duplicated[i] = str[i];
-		i++;
-	}
-	
-	str_duplicated[i] = '\0';
-	return (str_duplicated);
+	for (i = 0 ; str[i] != '\0' ; i++)
+		s[i] = str[i];
+	s[i] = '\0';
+	return (s);
+	free(s);
 }
