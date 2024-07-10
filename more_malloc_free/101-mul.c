@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+/**
+ * _isdigit - Checks if a string contains only digits.
+ * @str: The string to check.
+ *
+ * Return: 1 if the string contains only digits, 0 otherwise.
+ */
 int _isdigit(char *str)
 {
 	while (*str)
