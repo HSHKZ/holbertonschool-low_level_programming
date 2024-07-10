@@ -3,13 +3,18 @@
 
 /**
  * _realloc - Reallocates a memory block using malloc and free.
+ *
  * @ptr: Pointer to the memory previously allocated with malloc(old_size)
+ *
  * @old_size: Size of the allocated space for ptr, in bytes
+ *
  * @new_size: New size of the memory block, in bytes
  *
  * Return: Pointer to the newly allocated memory block
  */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+
 {
 	void *new_ptr;
 	unsigned int min_size;
