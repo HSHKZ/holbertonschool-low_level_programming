@@ -3,8 +3,6 @@
 
 /**
  * print_error_and_exit - Prints "Error" and exits with status 98.
- *
- * Return: No return value
  */
 void print_error_and_exit(void)
 {
@@ -15,7 +13,6 @@ void print_error_and_exit(void)
 /**
  * is_valid_number - Checks if a string contains only digits.
  * @str: The string to check
- *
  * Return: 1 if valid number, 0 otherwise
  */
 int is_valid_number(char *str)
@@ -33,7 +30,6 @@ int is_valid_number(char *str)
  * multiply_strings - Multiplies two strings representing numbers.
  * @num1: The first number as a string
  * @num2: The second number as a string
- *
  * Return: The result of num1 * num2 as a string
  */
 char *multiply_strings(char *num1, char *num2)
@@ -83,7 +79,6 @@ char *multiply_strings(char *num1, char *num2)
  * main - Entry point of the program
  * @argc: Number of arguments
  * @argv: Array of argument strings
- *
  * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
