@@ -35,11 +35,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 	}
 	for (i = 0 ; i < size ; i++)
 	{
-
-		if ((cmp)(array[i]) == true)
-		{
+	if ((cmp)(array[i]) == true)
+	{
 			return (i);
-		}
+	}
 	}
 	return (-1);
 }	
