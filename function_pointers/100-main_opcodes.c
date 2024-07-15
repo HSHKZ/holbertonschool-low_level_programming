@@ -9,11 +9,10 @@
  * Description: This function prints the opcodes of the specified
  * function in hexadecimal format.
  */
-
 void print_opcodes(void *func, int n)
 {
-    unsigned char *p = (unsigned char *)func;
     int i;
+    unsigned char *p = (unsigned char *)func;
 
     for (i = 0; i < n; i++)
     {
@@ -36,7 +35,6 @@ void print_opcodes(void *func, int n)
  * Description: This program prints the opcodes of its own main function.
  * The number of bytes to print is specified as a command-line argument.
  */
-
 int main(int argc, char *argv[])
 {
     int n;
