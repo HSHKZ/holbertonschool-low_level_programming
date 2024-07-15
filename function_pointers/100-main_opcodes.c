@@ -37,21 +37,21 @@ void print_opcodes(void *func, int n)
  */
 int main(int argc, char *argv[])
 {
-    int n;
+ int n;
 
-    if (argc != 2)
-    {
-        printf("Error\n");
-        return (1);
-    }
+ if (argc != 2)
+ {
+ 	printf("Error\n");
+ 	return (1);
+ }
 
-    n = atoi(argv[1]);
-    if (n < 0)
-    {
-        printf("Error\n");
-        return (2);
-    }
+ n = atoi(argv[1]);
+ if (n < 0)
+ {
+ 	printf("Error\n");
+ 	return (2);
+ }
 
-    print_opcodes((void *)main, n);
-    return (0);
+ print_opcodes((void *)main, n);
+ return (0);
 }
