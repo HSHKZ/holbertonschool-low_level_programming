@@ -1,19 +1,20 @@
 section .data
-    msg db 'Hello, World', 0x0A  ; Message to print followed by newline
-    len equ $ - msg              ; Length of the message
+    message db 'Hello, World', 0xA  ; Our message plus newline character
+    msglen equ $ - message          ; Length of the message including newline
 
 section .text
     global _start
 
 _start:
-    ; sys_write (stdout)
-    mov rax, 1          ; syscall number for write
-    mov rdi, 1          ; file descriptor for stdout
-    mov rsi, msg        ; pointer to the message
-    mov rdx, len        ; length of the message
-    syscall
+    ; System call write (rax = 1)
+    mov rax, 1          ; syscall number for sys_write
+    mov rdi, 1          ; file descriptor 1: stdout
+    mov rsi, message    ; message to print
+    mov rdx, msglen     ; message length
 
-    ; sys_exit (exit code 0)
-    mov rax, 60         ; syscall number for exit
-    xor rdi, rdi        ; exit code 0
-    syscall
+    syscall             ; invoke syscall
+
+    ; Exit the program
+    mov rax, 60         ; syscall number for sys_exit
+    xor rdi, rdi        ; exit status 0
+    syscall             ; invoke syscall
