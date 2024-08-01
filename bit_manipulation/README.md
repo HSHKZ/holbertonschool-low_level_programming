@@ -35,6 +35,8 @@ C provides format specifiers for converting and displaying different numeric bas
 
 To compile the project, ensure you have `gcc` installed. Use the following commands:
 
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 -Wno-format *.c -o bit_manipulation
+
 ## Examples:
 
 Example 1: Setting a Bit
@@ -44,7 +46,10 @@ This example shows how to set a specific bit in an integer.
 #include <stdio.h>
 #include "bit_manipulation.h"
 
-int main() {
+int main() 
+
+{
+
     unsigned int num = 0; // Initial number: 0000 0000
     int position = 3;     // Position to set the bit
 
@@ -53,6 +58,7 @@ int main() {
     // Output: Number after setting bit 3: 8 (0000 1000 in binary)
 
     return 0;
+
 }
 
 Example 2: Checking a Bit
@@ -62,7 +68,10 @@ This example demonstrates how to check if a specific bit is set in an integer.
 #include <stdio.h>
 #include "bit_manipulation.h"
 
-int main() {
+int main(void) 
+
+{
+
     unsigned int num = 8; // Initial number: 0000 1000
     int position = 3;     // Position to check the bit
 
@@ -76,6 +85,7 @@ int main() {
     // Output: Is bit 2 set? No
 
     return 0;
+
 }
 
 ## Testing
