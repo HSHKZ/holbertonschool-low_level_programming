@@ -5,8 +5,9 @@
 
 /**
  * close_fd - Closes a file descriptor
- *
  * @fd: File descriptor
+ *
+ * Description: Closes the file descriptor and handles errors.
  */
 void close_fd(int fd)
 {
@@ -21,7 +22,11 @@ void close_fd(int fd)
  * main - Copies the content of a file
  * @argc: Number of arguments
  * @argv: Argument vector
- * Return: 0 on success, or exits with an error
+ *
+ * Return: 0 on success, or exits with an error code
+ *
+ * Description: Handles file copying from source to destination.
+ *              Exits with various codes depending on the errors encountered.
  */
 int main(int argc, char *argv[])
 {
@@ -72,5 +77,6 @@ int main(int argc, char *argv[])
 
     close_fd(src);
     close_fd(dest);
+
     return (0);
 }
