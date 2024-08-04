@@ -5,6 +5,7 @@
 
 /**
  * close_fd - Closes a file descriptor
+ *
  * @fd: File descriptor
  */
 void close_fd(int fd)
