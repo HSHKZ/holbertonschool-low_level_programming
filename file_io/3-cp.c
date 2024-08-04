@@ -1,5 +1,6 @@
 #include "main.h"
 #define BUF_SIZE 1024
+
 /**
  * main - Entry point of the program
  * @argc: Number of arguments passed to the program
